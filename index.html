@@ -59,7 +59,9 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-2 publication-title">JMMMU-Pro: Image-based Japanese Multi-discipline Multimodal Understanding Benchmark via Vibe Benchmark Construction</h1>
+          <h1 class="title is-2 publication-title">
+            <img src="./static/images/jmmmu_top.png" alt="JMMMU-Pro" style="height: 1.9em; vertical-align: middle; margin-right: 0.2em;"><span style="font-size: 1.2em;">JMMMU-Pro</span><br><span style="font-size: 0.85em;">Image-based Japanese Multi-discipline Multimodal Understanding Benchmark via Vibe Benchmark Construction</span>
+          </h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://atsumiyai.github.io/">Atsuyuki Miyai</a>,</span>
@@ -81,21 +83,12 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2506.01952"
+                <a href="TBD"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
                   <span>Paper</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="TBD"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
                 </a>
               </span>
               <!-- Code Link. -->
@@ -116,6 +109,16 @@
                       <i class="fas fa-database"></i>
                   </span>
                   <span>Dataset</span>
+                  </a>
+              </span>
+              <!-- Leaderboard Link. -->
+              <span class="link-block">
+                <a href="https://huggingface.co/spaces/JMMMU/JMMMU-Pro_Leaderboard"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-trophy"></i>
+                  </span>
+                  <span>Leaderboard</span>
                   </a>
               </span>
             </div>
@@ -157,14 +160,14 @@
 
           <h3 class="title is-5">2. We introduce <strong>Vibe Benchmark Construction</strong></h3>
           <p>
-            To build JMMMU-Pro, we propose Vibe Benchmark Construction, a methodology in which an image generative model (e.g., Nano Banana Pro) produces candidate visual questions, and humans verify the outputs and, when necessary, regenerate with adjusted prompts to ensure quality.
-            By leveraging Nano Banana Pro's highly realistic image generation capabilities and its ability to render clean Japanese text, we construct a high-quality benchmark at low cost, covering a wide range of background and layout designs.
+To build JMMMU-Pro, we propose Vibe Benchmark Construction, a methodology in which an image generative model (e.g., Nano Banana Pro) produces candidate visual questions, and humans verify the outputs and, when necessary, regenerate with adjusted prompts to ensure quality.
+By leveraging Nano Banana Pro's highly realistic image generation capabilities and its ability to render clean Japanese text, we construct a high-quality benchmark at low cost, covering a wide range of background and layout designs.
           </p>
 
           <h3 class="title is-5">3. Findings</h3>
           <p>
-            Experimental results show that all open-source LMMs struggle substantially with JMMMU-Pro, underscoring JMMMU-Pro as an important benchmark for guiding future efforts in the open-source community.
-            We believe that JMMMU-Pro provides a more rigorous evaluation tool for assessing the Japanese capabilities of LMMs and that our Vibe Benchmark Construction also offers an efficient guideline for future development of image-based VQA benchmarks.
+Experimental results show that all open-source LMMs struggle substantially with JMMMU-Pro, underscoring JMMMU-Pro as an important benchmark for guiding future efforts in the open-source community.
+We believe that JMMMU-Pro provides a more rigorous evaluation tool for assessing the Japanese capabilities of LMMs and that our Vibe Benchmark Construction also offers an efficient guideline for future development of image-based VQA benchmarks.
           </p>
         </div>
       </div>
@@ -199,7 +202,9 @@
             This paradigm is particularly effective for image-based VQA, where humans cannot easily edit content directly inside the image in the same way as text-based QA. By letting the model handle generation and restricting human effort to <em>adjusting the prompt until a satisfactory image is produced</em>, the method enables efficient and scalable construction of benchmarks, especially in domains like image-based VQA, where dataset creation is difficult. A more detailed comparison with existing work is provided in the related work section.
           </p>
           
-          <img src="./static/images/vibe_construction.png" alt="Vibe Benchmark Construction" style="max-width: 100%; height: auto; margin-bottom: 2rem;">
+          <div style="text-align: center;">
+            <img src="./static/images/vibe_construction.png" alt="Vibe Benchmark Construction" style="max-width: 100%; height: auto; margin-bottom: 2rem;">
+          </div>
 
         </div>
       </div>
@@ -207,6 +212,30 @@
   </div>
 </section>
 
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content has-text-left">
+          <h2 class="title is-3 has-text-centered">Samples</h2>
+
+          <!-- Image and caption -->
+          <h3 class="title is-4 has-text-centered" style="margin-top: 0.5rem; margin-bottom: 2.0rem;">
+            JMMMU-Pro Samples
+          </h3>
+          <p>
+            We present samples from JMMMU-Pro in the figure below. As shown in this figure, JMMMU-Pro includes images with a wide variety of backgrounds, reflecting the diversity in real-world scenarios.
+          </p>
+          
+          <img src="./static/images/samples.png" alt="JMMMU-Pro Samples" style="max-width: 100%; height: auto; margin-bottom: 2rem;">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <section class="section">
@@ -311,7 +340,9 @@
             This indicates that solving JMMMU-Pro demands not only strong OCR capabilities, but also the ability to interpret and reason over language and vision in an integrated manner through visual perception.
           </p>
           
-          <img src="./static/images/ocr_analysis.png" alt="OCR Analysis" style="max-width: 100%; height: auto; margin-bottom: 2rem;">
+          <div style="text-align: center;">
+            <img src="./static/images/ocr_analysis.png" alt="OCR Analysis" style="max-width: 100%; height: auto; margin-bottom: 2rem;">
+          </div>
 
         </div>
       </div>
@@ -319,29 +350,6 @@
   </div>
 </section>
 
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column">
-        <div class="content has-text-left">
-          <h2 class="title is-3 has-text-centered">Samples</h2>
-
-          <!-- Image and caption -->
-          <h3 class="title is-4 has-text-centered" style="margin-top: 0.5rem; margin-bottom: 2.0rem;">
-            JMMMU-Pro Samples
-          </h3>
-          <p>
-            We present samples from JMMMU-Pro in the figure below. As shown in this figure, JMMMU-Pro includes images with a wide variety of backgrounds, reflecting the diversity in real-world scenarios.
-          </p>
-          
-          <img src="./static/images/samples.png" alt="JMMMU-Pro Samples" style="max-width: 100%; height: auto; margin-bottom: 2rem;">
-
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 <section class="section" id="BibTeX">
