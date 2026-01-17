@@ -3,11 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="JMMMU-Pro is benchmark for evaluating image-based Japanese multi-discipline multimodal understanding benchmark.">
-  <meta name="keywords" content="Japanese Multi-discipline Multimodal Understanding, Benchmark">
+        content="MangaVQA and MangaLMM: A Benchmark and Specialized Model for Multimodal Manga Understanding">
+  <meta name="keywords" content="Manga, VQA, OCR, Large Multimodal Models, Benchmark">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>
-    JMMMU-Pro: Image-based Japanese Multi-discipline Multimodal Understanding Benchmark via Vibe Benchmark Construction</title>
+  <title>MangaVQA and MangaLMM: A Benchmark and Specialized Model for Multimodal Manga Understanding</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -33,7 +32,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/jmmmu_top.png">
+  <link rel="icon" href="./static/images/manga_icon.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -60,30 +59,43 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-2 publication-title">
-            <img src="./static/images/jmmmu_top.png" alt="JMMMU-Pro" style="height: 1.9em; vertical-align: middle; margin-right: 0.2em;"><span style="font-size: 1.2em;">JMMMU-Pro</span><br><span style="font-size: 0.85em;">Image-based Japanese Multi-discipline Multimodal Understanding Benchmark via Vibe Benchmark Construction</span>
+            <span style="font-size: 1.2em;">MangaVQA and MangaLMM</span><br><span style="font-size: 0.85em;">A Benchmark and Specialized Model for Multimodal Manga Understanding</span>
           </h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://atsumiyai.github.io/">Atsuyuki Miyai</a>,</span>
-            <span class="author-block">
-              <a href="https://www.linkedin.com/in/shota-onohara/"> Shota Onohara</a>,
+              <a href="https://jeonghunbaek.net/">Jeonghun Baek*</a>,
             </span>
             <span class="author-block">
-              <a href="https://jeonghunbaek.net/5e50812ade674698bdffe7f4eac5c745"> Jeonghun Baek</a>,
+              <a href="https://www.sri.inf.ethz.ch/people/kazuki">Kazuki Egashira*</a>,
             </span>
             <span class="author-block">
-              <a href="https://scholar.google.co.jp/citations?user=CJRhhi0AAAAJ&hl=en">Kiyoharu Aizawa</a>,
+              <a href="https://www.linkedin.com/in/shota-onohara/">Shota Onohara*</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://atsumiyai.github.io/">Atsuyuki Miyai*</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://imajuku.tech/">Yuki Imajuku</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://woodrush.github.io/">Hikaru Ikuta</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.co.jp/citations?user=CJRhhi0AAAAJ&hl=en">Kiyoharu Aizawa</a>
             </span>
           </div>
           <div class="is-size-5 publication-authors">
             <span class="author-block">The University of Tokyo</span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">*: Equal Contribution</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="http://arxiv.org/abs/2512.14620"
+                <a href="https://arxiv.org/abs/2505.20298"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -93,7 +105,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/EvolvingLMMs-Lab/lmms-eval"
+                <a href="https://github.com/manga109/MangaLMM"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -103,7 +115,7 @@
               </span>
               <!-- Dataset Link. -->
               <span class="link-block">
-                <a href="https://huggingface.co/datasets/JMMMU/JMMMU-Pro"
+                <a href="https://huggingface.co/collections/hal-utokyo/mangavqa-and-mangaocr"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-database"></i>
@@ -111,14 +123,14 @@
                   <span>Dataset</span>
                   </a>
               </span>
-              <!-- Leaderboard Link. -->
+              <!-- Model Link. -->
               <span class="link-block">
-                <a href="https://huggingface.co/spaces/JMMMU/JMMMU-Pro_Leaderboard"
+                <a href="https://huggingface.co/hal-utokyo/MangaLMM"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <i class="fas fa-trophy"></i>
+                      <i class="fas fa-robot"></i>
                   </span>
-                  <span>Leaderboard</span>
+                  <span>Model</span>
                   </a>
               </span>
             </div>
@@ -133,13 +145,11 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="./static/images/teaser_image.png" alt="teaser" style="max-width: 100%; height: auto;">
+      <img src="./static/images/teaser.png" alt="teaser" style="max-width: 100%; height: auto;">
       <h2 class="subtitle has-text-centered">
-        Building JMMMU-Pro via Vibe Benchmark Construction. JMMMU-Pro extends
-        JMMMU by embedding each question image and text into a single image. To construct JMMMU-Pro,
-        we propose Vibe Benchmark Construction, where an image generation model creates questions,
-        followed by human verification and prompt refinement to ensure quality. Experiments indicate that
-        current open-source LMMs struggle with JMMMU-Pro.
+        Overview of MangaVQA and MangaLMM. We present MangaVQA, a newly proposed benchmark for
+        multimodal context understanding, consisting of 526 manually constructed question–answer pairs. We also develop
+        MangaLMM, a manga-specialized model jointly trained to handle both MangaOCR and MangaVQA tasks.
       </h2>
     </div>
   </div>
@@ -153,27 +163,201 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <h3 class="title is-5">1. We introduce <strong>JMMMU-Pro</strong> (<strong><em>Japanese MMMU-Pro</em></strong>)</h3>
+          <h3 class="title is-5">Why should LMMs understand Manga?</h3>
           <p>
-            Following the evolution from MMMU to MMMU-Pro, JMMMU-Pro extends JMMMU by composing the question image and question text into a single image, thereby creating a benchmark that requires integrated visual–textual understanding through visual perception.
+            Manga, or Japanese comics, is a richly multimodal narrative form that blends images and text in complex ways, featuring intricate panel layouts, expressive visual elements, and text embedded directly within images. Teaching large multimodal models (LMMs) to understand such narratives at a human-like level could help <strong>manga creators reflect on and refine their stories</strong>. Such models could assist manga creators by functioning like a skilled editor or assistant, capable of reading and understanding manga in the way humans do. This calls for evaluating models' abilities to process visual-textual content and follow the context in a coherent and human-like manner.
           </p>
-
-          <h3 class="title is-5">2. We introduce <strong>Vibe Benchmark Construction</strong></h3>
+          <h3 class="title is-5">1. We introduce <strong>MangaVQA</strong> and <strong>MangaOCR</strong></h3>
           <p>
-To build JMMMU-Pro, we propose Vibe Benchmark Construction, a methodology in which an image generative model (e.g., Nano Banana Pro) produces candidate visual questions, and humans verify the outputs and, when necessary, regenerate with adjusted prompts to ensure quality.
-By leveraging Nano Banana Pro's highly realistic image generation capabilities and its ability to render clean Japanese text, we construct a high-quality benchmark at low cost, covering a wide range of background and layout designs.
+            We present <strong>MangaVQA</strong>, a benchmark of 526 manually constructed question–answer pairs designed to evaluate an LMM's ability to accurately answer targeted, factual questions grounded in both visual and textual context. The questions are categorized along four key axes: required information (panel vs. page level), answer type (exact extraction vs. descriptive answering), 5W1H question types, and author familiarity.
           </p>
-
-          <h3 class="title is-5">3. Findings</h3>
           <p>
-Experimental results show that all open-source LMMs struggle substantially with JMMMU-Pro, underscoring JMMMU-Pro as an important benchmark for guiding future efforts in the open-source community.
-We believe that JMMMU-Pro provides a more rigorous evaluation tool for assessing the Japanese capabilities of LMMs and that our Vibe Benchmark Construction also offers an efficient guideline for future development of image-based VQA benchmarks.
+            We also present <strong>MangaOCR</strong>, focusing on in-page text detection and recognition. MangaOCR consolidates annotations from the Manga109 dataset and the manga onomatopoeia dataset, containing approximately 209K narrative text instances including dialogue and onomatopoeia. Together, these benchmarks enable comprehensive evaluation of multimodal manga understanding.
+          </p>
+        
+          <h3 class="title is-5">2. We develop <strong>MangaLMM</strong></h3>
+          <p>
+            MangaLMM is a manga-specialized version of Qwen2.5-VL, finetuned to jointly address both VQA and OCR tasks. We construct training data by using the MangaOCR annotations directly for OCR training, and by generating 39,837 synthetic VQA samples using GPT-4o with OCR annotations as guidance. This joint training enables MangaLMM to perform human-like manga understanding by combining text recognition with contextual comprehension.
+          </p>
+        
+          <h3 class="title is-5">3. We show the superiority of MangaLMM over State-of-the-Art LMMs</h3>
+          <p>
+            We perform extensive analysis and evaluate MangaLMM against proprietary models such as GPT-4o, Gemini 2.5, and Claude Sonnet 4.5, as well as various open-source LMMs. Our results reveal that even state-of-the-art proprietary models achieve near-zero OCR scores on manga, highlighting the limitations of general-purpose LMMs in stylized visual domains. In contrast, MangaLMM achieves <strong>71.5% OCR Hmean</strong> and a competitive <strong>6.68 VQA score</strong>, demonstrating promising performance on both tasks.
           </p>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content has-text-left">
+          <h2 class="title is-3 has-text-centered">Manga109 Dataset and MangaOCR Benchmark</h2>
+
+          <!-- Manga109 -->
+          <h3 class="title is-4" style="margin-top: 1.5rem;">
+            Manga109: A Widely Used Dataset for Manga Research
+          </h3>
+          <p>
+            We selected <strong>Manga109</strong> for its open-access license, diverse manga titles, and rich annotations. Manga109 is a dataset composed of <strong>109 volumes</strong> of Japanese comics (manga), capturing many distinctive features:
+          </p>
+          <ul>
+            <li>Predominantly <strong>black-and-white</strong> artwork</li>
+            <li><strong>Two-page spreads</strong> with right-to-left reading order</li>
+            <li><strong>Vertical text layout</strong></li>
+            <li>Frequent use of stylized <strong>onomatopoeia</strong> (e.g., Boom, Bang)</li>
+            <li>Culturally specific dialogue with honorifics and idiomatic expressions</li>
+          </ul>
+
+          <div style="text-align: center; margin: 1.5rem 0;">
+            <img src="./static/images/two_page_spread.png" alt="Two-page spread example from Manga109" style="max-width: 80%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+            <p class="has-text-grey" style="margin-top: 0.5rem; font-size: 0.9rem;">Illustration of a two-page spread from the Manga109 dataset.</p>
+          </div>
+
+          <!-- MangaOCR -->
+          <h3 class="title is-4" style="margin-top: 2rem;">
+            MangaOCR: A Consolidated Dataset for Manga Text Recognition
+          </h3>
+          <p>
+            Text in manga carries essential narrative information, appearing as <strong>speech balloons</strong> and stylized <strong>onomatopoeia</strong> integrated into the artwork. MangaOCR addresses this challenge by targeting two key categories of embedded text:
+          </p>
+
+          <div class="columns is-centered" style="margin: 1.5rem 0;">
+            <div class="column is-half">
+              <div class="box has-text-centered">
+                <span class="icon is-large has-text-primary"><i class="fas fa-comment-dots fa-2x"></i></span>
+                <p class="title is-4" style="margin-top: 0.5rem;">Dialogue</p>
+                <p class="subtitle is-5 has-text-grey">~148K instances</p>
+              </div>
+            </div>
+            <div class="column is-half">
+              <div class="box has-text-centered">
+                <span class="icon is-large has-text-warning"><i class="fas fa-bolt fa-2x"></i></span>
+                <p class="title is-4" style="margin-top: 0.5rem;">Onomatopoeia</p>
+                <p class="subtitle is-5 has-text-grey">~61K instances</p>
+              </div>
+            </div>
+          </div>
+
+          <p>
+            We construct the MangaOCR dataset by consolidating existing annotations from the Manga109 dataset and the manga onomatopoeia dataset. It contains approximately <strong>209K narrative text instances</strong>, spanning a wide variety of visual styles and layouts.
+          </p>
+
+          <p>
+            The MangaOCR task is performed on <strong>two-page spreads</strong> and consists of two sub-tasks:
+          </p>
+          <ul>
+            <li><strong>Text Detection:</strong> Localizes textual regions in the image</li>
+            <li><strong>Text Recognition:</strong> Reads the localized text</li>
+          </ul>
+
+          <!-- Author-Aware Dataset Split -->
+          <h3 class="title is-4" style="margin-top: 2rem;">
+            Author-Aware Dataset Split
+          </h3>
+          <p>
+            We adopt a dataset split protocol based on author information to evaluate different types of generalization:
+          </p>
+
+          <div class="columns is-multiline" style="margin-top: 1rem;">
+            <div class="column is-one-third">
+              <div class="notification is-info is-light">
+                <p class="has-text-weight-bold"><i class="fas fa-book"></i> Intra-series</p>
+                <p style="font-size: 0.9rem;">5 test volumes from same series as training set (different volumes)</p>
+              </div>
+            </div>
+            <div class="column is-one-third">
+              <div class="notification is-success is-light">
+                <p class="has-text-weight-bold"><i class="fas fa-user"></i> Intra-author</p>
+                <p style="font-size: 0.9rem;">5 test volumes from authors with other works in training set</p>
+              </div>
+            </div>
+            <div class="column is-one-third">
+              <div class="notification is-warning is-light">
+                <p class="has-text-weight-bold"><i class="fas fa-user-slash"></i> Unseen Author</p>
+                <p style="font-size: 0.9rem;">3 test volumes from authors not in training set</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dataset Statistics Table -->
+          <h3 class="title is-4" style="margin-top: 2rem;">
+            Dataset Statistics
+          </h3>
+
+          <table class="table is-bordered is-striped is-hoverable" style="margin: 1rem auto;">
+            <thead>
+              <tr>
+                <th>Count Type</th>
+                <th style="text-align: center;">Total</th>
+                <th style="text-align: center;">Train</th>
+                <th style="text-align: center;">Valid</th>
+                <th style="text-align: center;">Test</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Comic volumes</td>
+                <td style="text-align: center;">109</td>
+                <td style="text-align: center;">89</td>
+                <td style="text-align: center;">7</td>
+                <td style="text-align: center;">13</td>
+              </tr>
+              <tr>
+                <td>Images</td>
+                <td style="text-align: center;">10,602</td>
+                <td style="text-align: center;">8,763</td>
+                <td style="text-align: center;">673</td>
+                <td style="text-align: center;">1,166</td>
+              </tr>
+              <tr style="background-color: #f0f0f0;">
+                <td colspan="5"><strong>MangaOCR</strong></td>
+              </tr>
+              <tr>
+                <td style="padding-left: 2rem;">Dialogue</td>
+                <td style="text-align: center;">148K</td>
+                <td style="text-align: center;">120K</td>
+                <td style="text-align: center;">9K</td>
+                <td style="text-align: center;">18K</td>
+              </tr>
+              <tr>
+                <td style="padding-left: 2rem;">Onomatopoeia</td>
+                <td style="text-align: center;">61K</td>
+                <td style="text-align: center;">50K</td>
+                <td style="text-align: center;">4K</td>
+                <td style="text-align: center;">7K</td>
+              </tr>
+              <tr style="font-weight: bold;">
+                <td style="padding-left: 2rem;">Total</td>
+                <td style="text-align: center;">209K</td>
+                <td style="text-align: center;">170K</td>
+                <td style="text-align: center;">13K</td>
+                <td style="text-align: center;">26K</td>
+              </tr>
+              <tr style="background-color: #f0f0f0;">
+                <td colspan="5"><strong>MangaVQA</strong></td>
+              </tr>
+              <tr>
+                <td style="padding-left: 2rem;">QA pairs</td>
+                <td style="text-align: center;">40,363</td>
+                <td style="text-align: center;">39,837</td>
+                <td style="text-align: center;">−</td>
+                <td style="text-align: center;">526</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
 
@@ -183,28 +367,41 @@ We believe that JMMMU-Pro provides a more rigorous evaluation tool for assessing
       <!-- Benchmark Construction. -->
       <div class="column">
         <div class="content has-text-left">
-          <h2 class="title is-3 has-text-centered">Benchmark Construction</h2>
+          <h2 class="title is-3 has-text-centered">MangaVQA Benchmark</h2>
 
           <!-- Image and caption -->
-          <h3 class="title is-4 has-text-centered" style="margin-top: 0.5rem; margin-bottom: 2.0rem;">
-            Vibe Benchmark Construction
+          <h3 class="title is-4" style="margin-top: 0.5rem; margin-bottom: 2.0rem;">
+            Question Types and Categories
           </h3>
           <p>
-            Vibe Benchmark Construction is a methodology in which an image generation model plays the primary role in producing the VQA problem images, while humans only verify the outputs and adjust the prompts when necessary to ensure quality.
+            To evaluate model performance under realistic conditions, we manually constructed 526 question–answer (QA) pairs based on images from Manga109. Five annotators carefully developed a high-quality evaluation set, incorporating thorough human inspection and verification.
           </p>
           <p>
-            Although previous VQA benchmarks have used synthetic images generated by image generation models, these models have played only a supplementary role, producing just the visual part while the question text still had to be created separately by humans or by an LMM, incurring additional cost.
+            The question types are designed based on four key axes:
           </p>
-          <p>
-            In contrast, the key distinction of our proposed Vibe Benchmark Construction is that the entire VQA creation process is carried out by the image generation model, with humans intervening solely for verification and prompt refinement.
-          </p>
-          <p>
-            This paradigm is particularly effective for image-based VQA, where humans cannot easily edit content directly inside the image in the same way as text-based QA. By letting the model handle generation and restricting human effort to <em>adjusting the prompt until a satisfactory image is produced</em>, the method enables efficient and scalable construction of benchmarks, especially in domains like image-based VQA, where dataset creation is difficult. A more detailed comparison with existing work is provided in the related work section.
-          </p>
+          <ul>
+            <li><strong>Required Information:</strong> Whether solving the question requires information from a single panel or multiple panels at the page level</li>
+            <li><strong>Answer Type:</strong> Exact Extraction (word-level answers) vs. Descriptive Answering (sentence-level or explanatory answers)</li>
+            <li><strong>5W1H:</strong> Who, What, When, Where, Why, How</li>
+            <li><strong>Author Type:</strong> Seen Title, Seen Author (Different Title), Unseen Author</li>
+          </ul>
           
           <div style="text-align: center;">
-            <img src="./static/images/vibe_construction.png" alt="Vibe Benchmark Construction" style="max-width: 100%; height: auto; margin-bottom: 2rem;">
+            <img src="./static/images/distribution.png" alt="MangaVQA Distributions" style="max-width: 100%; height: auto; margin-bottom: 2rem;">
           </div>
+
+
+          <h3 class="title is-4" style="margin-top: 0.5rem; margin-bottom: 2.0rem;">
+            Answer Type Examples: Exact Extraction vs. Descriptive Answering
+          </h3>
+          <p>
+            <strong>(1) Exact Extraction (240 questions):</strong> Questions that require extracting answer words from the image. These questions necessitate accurately retrieving the answer word from the manga page. This category assesses the LMM's basic comprehension ability to identify and extract the correct answer part from the manga panels.
+          </p>
+          <p>
+            <strong>(2) Descriptive Answering (286 questions):</strong> Questions that require contextual or explanatory responses. These questions go beyond simple answer word extraction and require comprehending the context within the manga. This category allows us to evaluate whether the LMM can not only recognize the dialogue but also understand its underlying meaning in the context of the narrative.
+          </p>
+          
+          <img src="./static/images/answer_type.png" alt="Answer Type Examples" style="max-width: 100%; height: auto; margin-bottom: 2rem;">
 
         </div>
       </div>
@@ -219,17 +416,29 @@ We believe that JMMMU-Pro provides a more rigorous evaluation tool for assessing
     <div class="columns is-centered">
       <div class="column">
         <div class="content has-text-left">
-          <h2 class="title is-3 has-text-centered">Samples</h2>
+          <h2 class="title is-3 has-text-centered">Training Data Construction</h2>
 
-          <!-- Image and caption -->
-          <h3 class="title is-4 has-text-centered" style="margin-top: 0.5rem; margin-bottom: 2.0rem;">
-            JMMMU-Pro Samples
+          <!-- OCR Training Set -->
+          <h3 class="title is-4" style="margin-top: 1.5rem;">
+            OCR Training Set (T<sub>OCR</sub>)
           </h3>
           <p>
-            We present samples from JMMMU-Pro in the figure below. As shown in this figure, JMMMU-Pro includes images with a wide variety of backgrounds, reflecting the diversity in real-world scenarios.
+            For the OCR task, we use the MangaOCR training set. For each image, we format the sequence of text annotations as:
           </p>
-          
-          <img src="./static/images/samples.png" alt="JMMMU-Pro Samples" style="max-width: 100%; height: auto; margin-bottom: 2rem;">
+          <div class="box" style="background-color: #f5f5f5; font-family: monospace; overflow-x: auto;">
+            {"bbox_2d": [x<sub>top_left</sub>, y<sub>top_left</sub>, x<sub>bottom_right</sub>, y<sub>bottom_right</sub>], "text_content": "text"}
+          </div>
+
+          <!-- Synthetic VQA Training Set -->
+          <h3 class="title is-4" style="margin-top: 2rem;">
+            Synthetic VQA Training Set (T<sub>VQA</sub>)
+          </h3>
+          <p>
+            For the VQA task, we generate synthetic training data using <strong>GPT-4o</strong> (<code>gpt-4o-2024-11-20</code>). Following the synthetic data construction approach used in LLaVA, we generate <strong>five questions per image</strong> using both the image and its OCR annotation from T<sub>OCR</sub>.
+          </p>
+          <p>
+            As a result, we created a total of <strong>39,837 synthetic VQA samples</strong> from <strong>8,379 images</strong>.
+          </p>
 
         </div>
       </div>
@@ -246,39 +455,101 @@ We believe that JMMMU-Pro provides a more rigorous evaluation tool for assessing
         <div class="content has-text-centered">
           <h2 class="title is-3">Experimental Results</h2>
           <p>
-            The following figures illustrate the overall results on JMMMU-Pro.
+            The following table shows the comparison of LMMs on MangaOCR and MangaVQA.
           </p>
 
           <!-- First image and caption -->
           <h3 class="title is-4" style="margin-top: 0.1rem; margin-bottom: 0.3rem;">Overall Results</h3>
-          <img src="./static/images/main_table.png" alt="Overall Results" style="max-width: 100%; height: auto; margin-bottom: 0.3rem;">
-
+          <table class="table is-bordered is-striped is-hoverable" style="margin: 0 auto;">
+            <thead>
+              <tr>
+                <th>Method</th>
+                <th>MangaOCR<br>Hmean (%)</th>
+                <th>MangaVQA<br>LLM (/10.0)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="3" style="background-color: #f5f5f5;"><em>Proprietary Models</em></td>
+              </tr>
+              <tr>
+                <td>GPT-4o</td>
+                <td style="text-align: center;">0.0</td>
+                <td style="text-align: center;">6.00</td>
+              </tr>
+              <tr>
+                <td>Gemini 2.5 Flash</td>
+                <td style="text-align: center;">0.0</td>
+                <td style="text-align: center;"><strong>7.26</strong></td>
+              </tr>
+              <tr>
+                <td>Claude Sonnet 4.5</td>
+                <td style="text-align: center;">0.0</td>
+                <td style="text-align: center;">5.84</td>
+              </tr>
+              <tr>
+                <td colspan="3" style="background-color: #f5f5f5;"><em>Open-source Models</em></td>
+              </tr>
+              <tr>
+                <td>Phi-4-Multimodal-5.6B</td>
+                <td style="text-align: center;">0.0</td>
+                <td style="text-align: center;">3.39</td>
+              </tr>
+              <tr>
+                <td>Pangea-7B</td>
+                <td style="text-align: center;">0.0</td>
+                <td style="text-align: center;">3.23</td>
+              </tr>
+              <tr>
+                <td>LLaVA-OV-1.5-8B</td>
+                <td style="text-align: center;">0.0</td>
+                <td style="text-align: center;">3.46</td>
+              </tr>
+              <tr>
+                <td>Sarashina2-Vision-8B</td>
+                <td style="text-align: center;">0.0</td>
+                <td style="text-align: center;">4.45</td>
+              </tr>
+              <tr>
+                <td>Gemma-3-12B</td>
+                <td style="text-align: center;">0.0</td>
+                <td style="text-align: center;">4.13</td>
+              </tr>
+              <tr>
+                <td>Heron-NVILA-Lite-15B</td>
+                <td style="text-align: center;">0.0</td>
+                <td style="text-align: center;">3.76</td>
+              </tr>
+              <tr>
+                <td>Qwen2.5-VL-7B</td>
+                <td style="text-align: center;">0.9</td>
+                <td style="text-align: center;">5.65</td>
+              </tr>
+              <tr>
+                <td colspan="3" style="background-color: #f5f5f5;"><em>Ours</em></td>
+              </tr>
+              <tr style="background-color: #e8f5e9;">
+                <td><strong>MangaLMM (Ours)</strong></td>
+                <td style="text-align: center;"><strong>71.5</strong></td>
+                <td style="text-align: center;">6.68</td>
+              </tr>
+            </tbody>
+          </table>
+          <br>
+          <br>
           <div class="content has-text-left">
-            <h4 class="title is-5">F1. All open-source LMMs struggle significantly on JMMMU-Pro.</h4>
+            <h4 class="title is-5">F1. MangaLMM achieves strong performance on both tasks.</h4>
             <p>
-              As shown in the results table, open-source LMMs perform poorly on JMMMU-Pro, with the best model, Qwen3-VL-8B, achieving only 45.83, indicating substantial room for improvement. Furthermore, nine models perform less than 32%, close to random guessing.
+              MangaLMM can handle both tasks effectively: it achieves over 70% OCR score and shows competitive VQA performance. While it falls short of the proprietary model Gemini, it outperforms the other proprietary models GPT-4o and Claude Sonnet 4.5. MangaLMM achieves the best performance among the open-source models by a clear margin.
             </p>
+            <h4 class="title is-5">F2. All LMMs except MangaLMM show near-zero OCR scores.</h4>
             <p>
-              These results highlight that JMMMU-Pro poses a challenging and valuable benchmark for evaluating and advancing open-source LMMs.
-            </p>
-
-            <h4 class="title is-5">F2. Most open-source LMMs exhibit a significant performance drop compared to JMMMU.</h4>
-            <p>
-              As shown in the results table, most open-source LMMs, except for Qwen2.5-VL-7B, show a substantial decline in accuracy on JMMMU-Pro relative to JMMMU.
-            </p>
-            <p>
-              Moreover, when we compare the CS and CA subsets, we find that models with a clear performance gap between the JMMMU's two subsets are similarly low on both in JMMMU-Pro. This suggests that their weakness lies in a fundamental lack of vision-side understanding, rather than in the type of question.
-            </p>
-            <p>
-              These results demonstrate that JMMMU-Pro provides valuable feedback to model developers when used in comparison with JMMMU.
+              As shown in the results table, all LMMs except MangaLMM show near-zero scores on the MangaOCR benchmark. Most of their predictions consist of meaningless repetitions or short repeated tokens. The extremely low OCR score before finetuning is likely due to two main factors: (1) these models are not familiar with manga data, and (2) their weak detection capabilities may limit OCR performance.
             </p>
 
-            <h4 class="title is-5">F3. Closed-source LMMs achieve substantially higher performance on JMMMU-Pro, revealing a serious gap relative to open-source models.</h4>
+            <h4 class="title is-5">F3. Proprietary models manage to answer VQA questions even with near-zero OCR scores.</h4>
             <p>
-              As shown in the results table, closed-source LMMs obtain notably high scores on JMMMU-Pro. This indicates that these models already possess the ability to seamlessly integrate visual and textual information and interpret them through visual perception.
-            </p>
-            <p>
-              Importantly, the strong performance of closed-source models does not diminish the value of JMMMU-Pro. Instead, it highlights the crucial role of JMMMU-Pro as a benchmark for guiding the development of open-source LMMs. Given the considerable performance gap between closed-source and open-source LMMs, reducing this gap is an essential goal for the community.
+              Despite the near-zero OCR score, where not only position information is missing but even the correct text content is not generated, these models still manage to answer certain VQA questions that require interpreting text within the image. This suggests that they are able to extract relevant information needed for answering VQA questions, even without performing OCR correctly.
             </p>
           </div>
 
@@ -287,62 +558,77 @@ We believe that JMMMU-Pro provides a more rigorous evaluation tool for assessing
     </div>
   </div>
 </section>
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column">
-        <div class="content has-text-left">
-          <h2 class="title is-3 has-text-centered">Chain-of-Thought Analysis</h2>
-
-          <!-- Image and caption -->
-          <h3 class="title is-4 has-text-centered" style="margin-top: 0.5rem; margin-bottom: 2.0rem;">
-            CoT Prompting Effectiveness
-          </h3>
-          <p>
-            We examine the effectiveness of Chain-of-Thought (CoT) prompting on JMMMU-Pro and JMMMU. The results are shown in the figure below. These results indicate that the effectiveness of CoT varies depending on the model and the evaluation setting for both JMMMU-Pro and JMMMU.
-          </p>
-          <p>
-            For example, on JMMMU-Pro, 7 out of the 12 LMMs achieve higher performance with CoT prompting, whereas on JMMMU, only 3 models benefit from CoT. Moreover, when examined on a per-model basis, LMMs such as Pangea-7B, LLaVA-OV-1.5-8B, InternVL2.5-8B, and Sarashina2.2-V-3B show different prompt preferences between JMMMU and JMMMU-Pro.
-          </p>
-          <p>
-            These findings suggest that optimal prompting strategies must be tailored to each model and each task, rather than relying on a single prompting approach across settings.
-          </p>
-          
-          <img src="./static/images/cot_analysis.png" alt="CoT Analysis" style="max-width: 100%; height: auto; margin-bottom: 2rem;">
-
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+<!-- 
 
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column">
         <div class="content has-text-left">
-          <h2 class="title is-3 has-text-centered">OCR Analysis</h2>
+          <h2 class="title is-3 has-text-centered">Effect of Finetuning</h2>
 
-          <!-- Image and caption -->
           <h3 class="title is-4 has-text-centered" style="margin-top: 0.5rem; margin-bottom: 2.0rem;">
-            OCR Performance Correlation
+            Training Data Analysis
           </h3>
           <p>
-            We hypothesize that the primary cause of performance degradation on JMMMU-Pro is the inability of current LMMs to perform Japanese Optical Character Recognition (OCR). To examine this hypothesis, we compute the correlation between OCR performance and JMMMU-Pro accuracy across several LMMs.
+            Finetuning Qwen2.5-VL on the OCR training set (T<sub>OCR</sub>) and VQA training set (T<sub>VQA</sub>) enables the model to specialize in each respective task. On MangaOCR, the finetuned model achieves a significant improvement from 0.9% to 74.5%. On MangaVQA, the model, initially underperforming GPT-4o, surpasses it after finetuning.
           </p>
           <p>
-            The results are shown in the figure below. The correlation coefficient between OCR accuracy and JMMMU-Pro accuracy is 0.593. As illustrated in the figure, there is indeed a positive correlation between the two. However, high OCR ability does not necessarily translate directly into high JMMMU-Pro accuracy. For example, while Heron-NVILA and Sarashina2.2-V are comparable for OCR performance, the performance for JMMMU-Pro differs a lot.
-          </p>
-          <p>
-            This indicates that solving JMMMU-Pro demands not only strong OCR capabilities, but also the ability to interpret and reason over language and vision in an integrated manner through visual perception.
+            MangaLMM, a Qwen2.5-VL model finetuned jointly on both T<sub>OCR</sub> and T<sub>VQA</sub>, shows a slight drop in OCR performance compared to using T<sub>OCR</sub> alone, but achieves a small gain in VQA score over using T<sub>VQA</sub> alone. This suggests that the enhanced OCR capability provides helpful textual cues that marginally improve VQA performance.
           </p>
           
           <div style="text-align: center;">
-            <img src="./static/images/ocr_analysis.png" alt="OCR Analysis" style="max-width: 100%; height: auto; margin-bottom: 2rem;">
+            <img src="./static/images/finetuning_effect.png" alt="Effect of Finetuning" style="max-width: 80%; height: auto; margin-bottom: 2rem;">
           </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content has-text-left">
+          <h2 class="title is-3 has-text-centered">Category-wise Analysis</h2>
+
+          <h3 class="title is-4" style="margin-top: 0.5rem; margin-bottom: 2.0rem;">
+            Performance Breakdown by Category
+          </h3>
+          <p>
+            We observe consistent performance gains across all tags, indicating that our training contributes to stable improvement in VQA capability without favoring specific categories. Interestingly, the model also generalizes well to questions from unseen authors.
+          </p>
+          
+          <img src="./static/images/category_breakdown.png" alt="Category-wise Analysis" style="max-width: 100%; height: auto; margin-bottom: 2rem;">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content has-text-left">
+          <h2 class="title is-3 has-text-centered">Qualitative Analysis</h2>
+
+          <h3 class="title is-4" style="margin-top: 0.5rem; margin-bottom: 2.0rem;">
+            MangaVQA Examples
+          </h3>
+          <p>
+            We compare outputs of the original Qwen model and our trained MangaLMM. In the left and middle examples, performance improves significantly after training—the original model provides general or irrelevant answers, whereas the trained model leverages text-bubble content to produce more specific and correct ones.
+          </p>
+          <p>
+            In the right example, the trained model still struggles to produce an accurate answer due to character-level recognition errors, highlighting remaining challenges in manga understanding.
+          </p>
+          
+          <img src="./static/images/qualitative.png" alt="Qualitative Analysis" style="max-width: 100%; height: auto; margin-bottom: 2rem;">
 
         </div>
       </div>
@@ -355,11 +641,11 @@ We believe that JMMMU-Pro provides a more rigorous evaluation tool for assessing
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{miyai2025jmmmu-pro,
-  author    = {Miyai, Atsuyuki and Onohara, Shota and Baek, Jeonghun and Aizawa, Kiyoharu},
-  title     = {JMMMU-Pro: Vibe Benchmark Construction of Image-based Japanese Multi-discipline Multimodal Understanding Benchmark},
-  journal   = {arXiv preprint arXiv:2512.14620},
-  year      = {2025},
+    <pre><code>@inproceedings{baek2025mangavqa,
+  author    = {Baek, Jeonghun and Egashira, Kazuki and Onohara, Shota and Miyai, Atsuyuki and Imajuku, Yuki and Ikuta, Hikaru and Aizawa, Kiyoharu},
+  title     = {MangaVQA and MangaLMM: A Benchmark and Specialized Model for Multimodal Manga Understanding},
+  booktitle = {Findings of the Association for Computational Linguistics: EACL 2026},
+  year      = {2026},
 }</code></pre>
   </div>
 </section>
@@ -369,10 +655,10 @@ We believe that JMMMU-Pro provides a more rigorous evaluation tool for assessing
   <div class="container">
     <div class="content has-text-centered">
       <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
+         href="https://arxiv.org/abs/2505.20298">
         <i class="fas fa-file-pdf"></i>
       </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+      <a class="icon-link" href="https://github.com/manga109/MangaLMM" class="external-link">
         <i class="fab fa-github"></i>
       </a>
     </div>
@@ -385,11 +671,9 @@ We believe that JMMMU-Pro provides a more rigorous evaluation tool for assessing
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
           <p>
-            This means you are free to borrow the <a
+            This means you are free to borrow the 
               href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
             we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
           </p>
         </div>
       </div>
